@@ -1,0 +1,42 @@
+
+@media only screen and (min-width: 0px) {
+    .movieitem {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    
+        .movieitem img {
+            width: -webkit-fill-available;
+        }
+
+        .movieitem h2 {
+            color: var(--gray-400, #9CA3AF);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+        }
+
+        .movieitem h1 {
+            color: var(--gray-900, #111827);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+        }
+}
+
+@media only screen and (min-width: 992px) {
+    .movieitem {
+        float: left;
+        width: 25%;
+        gap: 2rem;
+    }
+}

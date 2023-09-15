@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat&family=Roboto:wght@700&display=swap');
+
+@media only screen and (min-width: 0px){
+    
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.50) 0%,
+            rgba(0, 0, 0, 0.50) 100%), url('../public/images/Poster.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 0.5rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 3rem;
+        font-family: 'DM Sans', sans-serif;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .search {
+        display: flex;
+        border: 2px solid #fff;
+        border-radius: 7px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        align-items: center;
+        text-align: center;
+        width: fit-content;
+        height: 2rem;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+    }
+
+    .search p {
+        color: var(--white, #FFF);
+            font-family: DM Sans;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+    }
+
+    .logo {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: space-around;
+            gap: 5px;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .logo h1 {
+        color: #fff;
+            font-family: DM Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+    }
+
+    .hide {
+        display: none;
+        height: 0px;
+        width: 0px;
+    }
+
+    .text {
+        color: #fff;
+        margin-top: 2rem;
+    }
+
+    .text h1 {
+        color: #FFF;
+            font-family: DM Sans;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+    }
+
+    .text p {
+        color: #FFF;
+            font-family: DM Sans;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            margin-top: 1rem;
+    }
+
+    .text img {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .hide {
+        display: contents;
+        align-items: center;
+    }
+
+    .hide p {
+        color: #fff;
+    }
+
+}
