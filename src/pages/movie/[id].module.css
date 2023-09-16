@@ -1,0 +1,138 @@
+@media only screen and (min-width: 0px) {
+    .card {
+        display: flex;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid grey;
+        border-top-right-radius: 2.8125rem;
+        border-bottom-right-radius: 2.8125rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        align-items: center;
+    }
+
+    .sidebarInner {
+        display: flex;
+        flex-direction: column;
+        gap:6.5625rem;
+    }
+
+    .logo {
+        display: flex;
+            align-items: center;
+            gap: 1rem;
+    }
+
+    .logpo h1 {
+        color: #333;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+    }
+
+    .logo img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 4.875rem;
+    }
+
+    .icon a {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .movieitem {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 1rem;
+            align-items: center;
+        }
+
+        .movieitem img {
+            border-radius: 0.625rem;
+            height: inherit;
+            width: inherit;
+        }
+
+                 .overview {
+                     color: #404040;
+                     font-family: Poppins;
+                     font-size: 18px;
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: normal;
+                 }
+        
+                 .title {
+                     color: #404040;
+                     font-family: Poppins;
+                     font-size: 15px;
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: normal;
+                 }
+
+                                 .icon a {
+                                     color: #333;
+                                     font-size: 18px;
+                                     font-style: normal;
+                                     font-weight: 500;
+                                     line-height: 24px;
+                                 }
+}
+
+@media only screen and (min-width: 992px) {
+    .movieitem {
+        padding: 2rem;
+        gap: 2rem !important;
+    }
+
+    .movieitem span {
+        width: 1198px;
+        height: 897px;
+    }
+
+    .overview {
+        color: #404040;
+            font-family: Poppins;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+    }
+
+    .title {
+        color: #404040;
+            font-family: Poppins;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+    }
+
+    .movieitem img {
+        border-radius: 2rem;
+        height: inherit;
+        width: inherit;
+    }
+
+    .icon a {
+        color: #333;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+    }
+}

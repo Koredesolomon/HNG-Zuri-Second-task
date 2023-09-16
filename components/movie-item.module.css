@@ -5,12 +5,6 @@
             flex-direction: column;
             gap: 0.5rem;
         }
-
-        .main {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
     
         .movieitem img {
             width: -webkit-fill-available;
@@ -35,8 +29,7 @@
 
 @media only screen and (min-width: 992px) {
     .movieitem {
-        float: left;
-        width: 25%;
-        gap: 2rem;
+        float: left !important;
+        width: 25% !important;
     }
 }

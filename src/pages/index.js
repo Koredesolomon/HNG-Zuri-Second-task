@@ -1,15 +1,14 @@
-import { getAllMovies } from "../../dummy-data"
 import MovieList from "../../components/movie-list";
 import Footer from "../../components/footer";
 import Nav from "../../components/nav";
+import { useState } from "react";
 
 export default function Home() {
-  const events = getAllMovies();
-
+ const [search, setSearch] = useState({});
   return (
     <main>
-      <Nav />
-      <MovieList items={events}/>
+      <Nav setSearch = {setSearch} />
+      <MovieList  search = {search}/>
       <Footer />
     </main>
   )

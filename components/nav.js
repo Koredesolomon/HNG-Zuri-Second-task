@@ -2,7 +2,11 @@ import { Icon } from '@iconify/react';
 import classes from './nav.module.css'
 
 
-export default function Nav() {
+
+export default function Nav({setSearch}) {
+    const handleSearch = (searchTerm) => {
+        setSearch(searchTerm);
+    };
     return (
         <nav className={classes.body}>
             <section className={classes.nav}>
@@ -11,11 +15,14 @@ export default function Nav() {
                     <h1>MovieBox</h1>
                 </div>
                 <div className={classes.search}>
-                    <p>What do you want to watch?</p>
+                    <input
+                        type="text"
+                        placeholder="What do you want to watch?"
+                        onChange={(e) => {handleSearch(e.target.value)}}
+                    />
                     <Icon icon="iconamoon:search-fill" color="white"/>
                 </div>
                 <div className={classes.hide}>
-                    <p>Sign In</p>
                     <img src='images/Menu.png' alt='Menu'></img>
                 </div>
             </section>
