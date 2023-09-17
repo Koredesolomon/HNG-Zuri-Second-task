@@ -15,11 +15,12 @@ function MovieDetail() {
             try {
                 let apiURL =`https://api.themoviedb.org/3/movie/${id}?api_key=56caa2391582294e3d9763cf0505ea87`;
                 const response = await fetch(apiURL);
+                
                 if (!response.ok) {
                 throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                setMovie(data);
+                  setMovie({...data});
             } 
             catch(error) {
                 setError(error.message);

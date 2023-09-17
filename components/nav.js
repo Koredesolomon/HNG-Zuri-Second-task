@@ -1,11 +1,19 @@
 import { Icon } from '@iconify/react';
 import classes from './nav.module.css'
+import { useState } from 'react';
 
 
 
 export default function Nav({setSearch}) {
+    const [isLoading, setIsLoading] = useState(false);
     const handleSearch = (searchTerm) => {
         setSearch(searchTerm);
+        setIsLoading(true);
+
+        setTimeout(() => {
+        setSearch(searchTerm);
+        setIsLoading(false);
+        }, 1000); 
     };
     return (
         <nav className={classes.body}>
@@ -20,7 +28,11 @@ export default function Nav({setSearch}) {
                         placeholder="What do you want to watch?"
                         onChange={(e) => {handleSearch(e.target.value)}}
                     />
-                    <Icon icon="iconamoon:search-fill" color="white"/>
+                     {isLoading ? (
+                        <div className={classes.loader}>Loading...</div> // Display loading indicator
+                    ) : (
+                        <Icon icon="iconamoon:search-fill" color="white" />
+                    )}
                 </div>
                 <div className={classes.hide}>
                     <img src='images/Menu.png' alt='Menu'></img>

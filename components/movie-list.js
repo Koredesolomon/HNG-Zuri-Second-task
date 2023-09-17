@@ -9,9 +9,9 @@ export default function MovieList ({search}) {
     useEffect(() => {
         async function fetchData() {
             try {
-                let apiURL =`https://api.themoviedb.org/3/search/movie?query=${search}&page=1&api_key=56caa2391582294e3d9763cf0505ea87`;
-                if(search ==""){
-                    apiURL =`https://api.themoviedb.org/3/movie/toprated?api_key=56caa2391582294e3d9763cf0505ea87`;
+                let apiURL =`https://api.themoviedb.org/3/movie/top_rated?api_key=56caa2391582294e3d9763cf0505ea87`;
+                if(search == 200){
+                    apiURL =`https://api.themoviedb.org/3/search/top_rated/movie?query=${search}&page=1&api_key=56caa2391582294e3d9763cf0505ea87`;
                 }
                 const response = await fetch(apiURL);
                 if (!response.ok) {
@@ -21,7 +21,6 @@ export default function MovieList ({search}) {
                 const data = await response.json();
                 let slicedArray = data.results.slice(0,10);
                 setMovies(slicedArray);
-                console.log(movies)
             } 
             catch(error) {
                 setError(error.message);
